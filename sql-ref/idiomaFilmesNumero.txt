@@ -1,0 +1,6 @@
+Idioma:
+
+0: ‘Português’
+1: ‘Inglês’
+2: ‘Espanhol’
+3: ‘Francês’
