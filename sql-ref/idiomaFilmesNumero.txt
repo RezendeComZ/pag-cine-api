@@ -1,6 +1,6 @@
 Idioma:
 
-0: ‘Português’
-1: ‘Inglês’
-2: ‘Espanhol’
-3: ‘Francês’
+1: ‘Português’
+2: ‘Inglês’
+3: ‘Espanhol’
+4: ‘Francês’
