@@ -10,11 +10,12 @@ const ApiController = {
     const db = new Sequelize(config);
     const filmes = await db.query('select * from filme;', {type: Sequelize.QueryTypes.SELECT});
     console.log(filmes)
-    res.render('filmes')
   },
   filmes: async (req, res) => {
     let filmes = await Filme.findAll();
-    console.log(filmes)
+    console.log(filmes[0].titulo)
+    res.render('filmes', {filmes})
+
   }
 }
 
