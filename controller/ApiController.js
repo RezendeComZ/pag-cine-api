@@ -15,7 +15,11 @@ const ApiController = {
     let filmes = await Filme.findAll();
     console.log(filmes[0].titulo)
     res.render('filmes', {filmes})
-
+  },
+  idiomas: async (req, res) => {
+    let idiomas = await Idioma.findAll();
+    console.log(idiomas[0].titulo)
+    res.render('idiomas', {idiomas})
   }
 }
 
