@@ -35,6 +35,7 @@ const ApiController = {
       }
     });
     console.log(idiomas.filmes)
+    console.log(idiomas.nomeIdioma)
   }
 }
 
