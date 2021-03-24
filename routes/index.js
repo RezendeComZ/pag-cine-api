@@ -6,5 +6,6 @@ const ApiController = require('../controller/ApiController');
 router.get('/', ApiController.index);
 router.get('/filmesQuery', ApiController.filmesQuery);
 router.get('/filmes', ApiController.filmes);
+router.get('/idiomas/:id', ApiController.idiomas);
 
 module.exports = router;

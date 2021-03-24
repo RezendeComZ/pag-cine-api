@@ -21,6 +21,20 @@ const ApiController = {
     });
     console.log(filmes[0].idioma)
     res.render('filmes', {filmes})
+  },
+  idiomas: async (req, res) => {
+    const {id} = req.params;
+    let idiomas = await Idioma.findOne({
+      where: {
+        id: id
+      },
+      include: {
+        model: Filme,
+        as: 'filmes',
+        required: true
+      }
+    });
+    console.log(idiomas.filmes)
   }
 }
 

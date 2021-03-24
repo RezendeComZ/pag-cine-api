@@ -11,5 +11,12 @@ module.exports = (sequelize, DataType) => {
     tableName: 'idioma',
     timestamps: false
   })
+
+  Idioma.associate = (listaDeModelos) => {
+    Idioma.hasMany(listaDeModelos.Filme,{
+      foreignKey: 'idioma_id',
+      as: 'filmes'
+    })
+  }
   return Idioma
 }
