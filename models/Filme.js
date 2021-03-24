@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataType) => {
   const Filme = sequelize.define('Filme', {
     id: {
-      type: DataType.INTERGER,
+      type: DataType.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
@@ -17,13 +17,13 @@ module.exports = (sequelize, DataType) => {
     duracao: DataType.TIME,
     sinopse: DataType.TEXT,
     rate: {
-      type: DataType.INTERGER,
+      type: DataType.INTEGER,
       allowNull: true
     },
     exibicaoInicio: DataType.DATEONLY,
     exibicaoFinal: DataType.DATEONLY,
-    idioma: DataType.INTERGER,
-    genero: DataType.INTERGER,
+    idioma: DataType.INTEGER,
+    genero: DataType.INTEGER,
     poster_url: {
       type: DataType.STRING,
       allowNull: true
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataType) => {
       allowNull: true
     },
     classificacao: {
-      type: DataType.INTERGER,
+      type: DataType.INTEGER,
       allowNull: true
     }
   },
