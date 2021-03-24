@@ -8,7 +8,7 @@ module.exports = (sequelize, DataType) => {
     nomeIdioma: DataType.STRING,
   },
   {
-    tableName: 'filme',
+    tableName: 'idioma',
     timestamps: false
   })
   return Idioma
