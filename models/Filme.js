@@ -23,7 +23,7 @@ module.exports = (sequelize, DataType) => {
     exibicaoInicio: DataType.DATEONLY,
     exibicaoFinal: DataType.DATEONLY,
     idioma_id: {
-      tyoe: DataType.INTEGER,      
+      type: DataType.INTEGER,      
     },
     genero_id: DataType.INTEGER,
     poster_url: {
