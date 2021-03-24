@@ -22,7 +22,9 @@ module.exports = (sequelize, DataType) => {
     },
     exibicaoInicio: DataType.DATEONLY,
     exibicaoFinal: DataType.DATEONLY,
-    idioma_id: DataType.INTEGER,
+    idioma_id: {
+      tyoe: DataType.INTEGER,      
+    },
     genero_id: DataType.INTEGER,
     poster_url: {
       type: DataType.STRING,
@@ -41,5 +43,13 @@ module.exports = (sequelize, DataType) => {
     tableName: 'filme',
     timestamps: false // por padrao ele espera 'created_at'e 'updated_at', por isso colocar false nesse caso
   })
+
+  Filme.associate = (listaDeModelos) => {
+    Filme.belongsTo(listaDeModelos.Idioma, {
+      foreignKey: 'id',
+      as: 'idioma'
+    })
+  }
+
   return Filme
 }
