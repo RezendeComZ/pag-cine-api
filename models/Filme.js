@@ -22,8 +22,8 @@ module.exports = (sequelize, DataType) => {
     },
     exibicaoInicio: DataType.DATEONLY,
     exibicaoFinal: DataType.DATEONLY,
-    idioma: DataType.INTEGER,
-    genero: DataType.INTEGER,
+    idioma_id: DataType.INTEGER,
+    genero_id: DataType.INTEGER,
     poster_url: {
       type: DataType.STRING,
       allowNull: true
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataType) => {
   },
   {
     tableName: 'filme',
-    timeStamp: false // por padrao ele espera 'created_at'e 'updated_at', por isso colocar false nesse caso
+    timestamps: false // por padrao ele espera 'created_at'e 'updated_at', por isso colocar false nesse caso
   })
   return Filme
 }
