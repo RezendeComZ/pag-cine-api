@@ -46,7 +46,7 @@ module.exports = (sequelize, DataType) => {
 
   Filme.associate = (listaDeModelos) => {
     Filme.belongsTo(listaDeModelos.Idioma, {
-      foreignKey: 'id',
+      foreignKey: 'idioma_id',
       as: 'idioma'
     })
   }

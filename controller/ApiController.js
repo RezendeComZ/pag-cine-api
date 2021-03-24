@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const config = require('../config/database')
-const { Filme } =  require('../models')
+const { Filme, Idioma } =  require('../models')
 
 const ApiController = {
   index: async (req, res, next) => {
@@ -12,14 +12,15 @@ const ApiController = {
     console.log(filmes)
   },
   filmes: async (req, res) => {
-    let filmes = await Filme.findAll();
-    console.log(filmes[0].titulo)
+    let filmes = await Filme.findAll({
+      include:{
+        model: Idioma,
+        as: 'idioma',
+        required: true // Todas as informações em comum 'true'
+      }
+    });
+    console.log(filmes[0].idioma)
     res.render('filmes', {filmes})
-  },
-  idiomas: async (req, res) => {
-    let idiomas = await Idioma.findAll();
-    console.log(idiomas[0].titulo)
-    res.render('idiomas', {idiomas})
   }
 }
 
