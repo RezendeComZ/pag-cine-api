@@ -12,10 +12,13 @@
   <h1>Filmes</h1>
   <div>
     <h2>Lista de filmes:</h2>
-    <% filmes.forEach(element => { %>
-    <%= element.tituloOriginal %>
+    <% filmes.forEach(filme => { %>
+    <%= filme.tituloOriginal %>
+    <%= filme.titulo %>
     <br>
+    <%= filme.idioma.dataValues.nomeIdioma %>
 
+    <p>----</p>
     <% }) %>
 
   </div>
